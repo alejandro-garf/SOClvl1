@@ -1,1 +1,45 @@
+# SOC Metrics & Objectives — Writeup
 
+## Core Metrics
+
+- **Is zero alerts for one month a good sign for your SOC team? (Yea/Nay)**  
+  Nay
+
+- **What is the False Positive Rate limit you should aim not to reach?**  
+  80%
+
+---
+
+## Triage Metrics
+
+- **Imagine a scenario where the SOC team receives a critical alert on Saturday. If the team works 8/5, on which day of the week will they acknowledge the alert?**  
+  Monday
+
+- **Imagine a scenario where an employee was lured into running data stealer malware: (1) The SOC team received the "Connection to Redline Stealer C2" alert after 12 minutes. (2) One of the L1 analysts on shift moved the alert to In Progress 10 minutes later. (3) After 6 minutes, the alert was escalated to L2, who spent 35 minutes cleaning the malware. Provide the MTTD, MTTA, and MTTR via comma.**  
+  `12, 10, 51`
+  - MTTD = 12 min (time to detect)
+  - MTTA = 10 min (time to acknowledge)
+  - MTTR = 10 + 6 + 35 = 51 min (time to respond, from alert creation to full remediation)
+
+---
+
+## Improving Metrics
+
+- **What is the False Positive Rate limit you should aim not to reach?**  
+  80%
+
+- **Should all SOC roles work together to keep metrics improving? (Yea/Nay)**  
+  Yea
+
+---
+
+## Practice Scenarios
+
+- **What flag did you get after completing the first scenario?**  
+  `THM{mttr:quick_start_but_slow_response}`
+
+- **What flag did you get after completing the second scenario?**  
+  `THM{mttd:time_between_attack_and_alert}`
+
+- **What flag did you get after completing the third scenario?**  
+  `THM{fpr:the_main_cause_of_l1_burnout}`
